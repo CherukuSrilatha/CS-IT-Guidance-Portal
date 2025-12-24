@@ -6,7 +6,7 @@ export const getAIResponse = async (
 ) => {
   try {
     const response = await axios.post(
-      "https://cs-it-guidance-portal-backend.onrender.com/api/ai",
+      `${import.meta.env.VITE_BACKEND_URL}/api/ai`,
       { messages }
     );
     return response.data.reply;
